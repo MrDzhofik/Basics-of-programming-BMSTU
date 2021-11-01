@@ -1,0 +1,39 @@
+program Proje;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var a, b:array[1..50] of integer;
+    n,i,k,j,t :integer;
+
+begin
+
+  write('Введите N=');
+  readln(n);
+  writeln('Исходный массив:');
+  for i:=1 to n do read(a[i]);
+  i:=1;
+  while i<=n do
+  begin
+  k:=0;
+  for j := i + 1 to n do
+    begin
+      if a[j]=a[i] then k:=k+1;
+    end;
+      if k<=3 then
+      begin
+        b[t] := a[i];
+        t := t + 1;
+      end;
+  i := i + 1;
+
+  end;
+    writeln('Остались:');
+  for i:=1 to n do
+    write(b[i],' ');
+  readln
+end.

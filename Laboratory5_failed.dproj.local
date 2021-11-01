@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.095,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Laboratory5.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.474,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2021.10.22 16:56:20.143,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Laboratory5_failed.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Laboratory5.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

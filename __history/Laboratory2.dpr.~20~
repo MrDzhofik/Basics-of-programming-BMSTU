@@ -1,0 +1,29 @@
+program Laboratory2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var x, y: real;
+begin
+  writeln('Enter x and y');
+  readln(x, y);
+  if x <= 1 then
+  begin
+    if (x >= abs(y)) then
+      writeln('belong')
+  end;
+  if x > 1 then
+  begin
+    if (2 - x >= abs(y)) then
+      writeln('belong')
+  end
+  else
+    writeln('do not belong');
+
+  Readln;
+
+end.
