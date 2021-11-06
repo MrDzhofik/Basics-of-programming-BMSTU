@@ -20,15 +20,15 @@ function g(x:real): real;
   end;
 
 begin
-  start := 0.5;     // Part 4
+  start := 0.5;
   finish := 1;
   step := 0.01;
   maxi := 0;
   Maxim(f, g, start, finish, step, maxi);
-  writeln('Максимальное расстояние между точками = ', maxi:3:16);
+  writeln('Максимальное расстояние между точками = ', maxi:3:20);
   readln;
 end.
-//  cnt := 1;                 // Part 3
+//  cnt := 1;                 // Часть 3
 //  ans := con;
 //  writeln('Enter a word');
 //  readln(word);
@@ -68,7 +68,7 @@ end.
 //    writeln('There are no such symbols');
 //  readln;
 
-//  writeln('Введите числа n(строки) и m(столбцы): ');    // Part 2
+//  writeln('Введите числа n(строки) и m(столбцы): ');    // Часть 2
 //  readln(n, m);
 //  writeln('Введите построчно элементы матрицы: ');
 //  for i := 1 to n do
@@ -105,7 +105,7 @@ end.
 //  readln;
 
 
-//  writeln('Введите n');         Part 1
+//  writeln('Введите n');         Часть 1
 //  readln(n);
 //  writeln('Введите ', n, ' чисел. По одному числу в строке');
 //  for i := 1 to n do readln(a[i]);

@@ -1,0 +1,25 @@
+unit Distance;
+
+interface
+type
+  func = function(x: real): real;
+  procedure Maxim(f:func; g:func; a:real; b:real; s:real; maxi:real);
+
+implementation
+Procedure Maxim;
+  var x, y1, y2, max: real;
+  begin
+    x := a;
+    while x <= b do
+      begin
+        y1 := f(x);
+        y2 := g(x);
+        if abs(y1 - y2) > maxi then
+          maxi := y1 - y2;
+        x := x + s;
+
+      end;
+
+  end;
+
+end.
