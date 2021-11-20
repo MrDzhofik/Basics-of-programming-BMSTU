@@ -6,11 +6,11 @@ program Project1;
 
 uses  SysUtils;
 Var A,B,C,D,E,X1,X2:Single;
-    st: shortstring;
+    st: word;
 Begin
     A := 2.43;
     B := 2;
-    str(A:4:3, st);
+    st := str(B, 'Error');
     writeln(st);
 //    WriteLn('Input A, B, C:');
 //  	ReadLn(A,B,C);

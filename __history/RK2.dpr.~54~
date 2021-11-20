@@ -1,0 +1,76 @@
+program RK2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var
+  maxi, imax, jmax, i, j, n, m, k: integer;
+  matrix: array[1..20, 1..20] of integer;
+  d: array[1..20] of integer;
+
+function find_column(col: integer; columns: array of integer; len: integer): boolean;
+    var g: integer;
+        key: boolean;
+    begin
+    key := True;
+    for g := 0 to len - 1 do
+      begin
+        if col = columns[g] then  // Если есть столбец в массиве, то присваиваем key значение False
+          key := False;
+      end;
+    result := key;
+    end;
+
+begin
+  randomize();
+  maxi := 0;
+  imax := 0;
+  jmax := 0;
+  writeln('Введите размеры матрицы: сначала строки потом столбцы (<= 20)');
+  readln(n, m);
+  for i := 1 to n do
+    begin
+      for j := 1 to m do
+        matrix[i, j] := random(2001) - 1000;     // Вводим псевдослучайные значения в матрицу в диапозоне от -1000 до 1000
+    end;
+
+  writeln('Введите размер массива, меньший, чем размеры столбцов в матрице: ');
+  readln(k);
+  writeln('Введите значения стобцов, которые будем игнорировать:');
+  for i := 1 to k do
+      read(d[i]);
+    readln;
+
+  for i := 1 to n do
+    begin
+      for j := 1 to m do
+         if find_column(j, d, k) then  // Ищем столбец в массиве d
+           begin
+             if abs(matrix[i, j]) > maxi then
+               begin
+                 maxi := abs(matrix[i, j]);
+                 imax := i;
+                 jmax := j;
+               end;
+           end;
+    end;
+
+
+
+  writeln('Исходная матрица:');
+  for i := 1 to n do
+    begin
+      for j := 1 to m do
+        write(matrix[i, j]:6);
+      writeln;
+    end;
+
+  writeln('Максимальный элемент: ', maxi);
+  writeln('Индекс максимального элемента: ', imax:3, jmax:3);
+  readln;
+  
+end.
