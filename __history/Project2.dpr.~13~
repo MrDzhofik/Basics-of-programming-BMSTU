@@ -1,0 +1,22 @@
+program Project2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var chto_to: array of char;
+    i: integer;
+    j: char;
+
+begin
+  for i := 1 to 50000 do
+    begin
+      for j := 'A' to 'Z' do
+        chto_to := chto_to + [j];
+    end;
+  writeln('Yes');
+  readln;
+end.

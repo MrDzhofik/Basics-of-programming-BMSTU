@@ -1,0 +1,58 @@
+program Laboratory8;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type foi = file of integer;
+var f, g: foi;
+    len, i, j: integer;
+    arr: array[1..128] of integer;
+
+begin
+  AssignFile(f, 'f.txt');
+  AssignFile(g, 'g.txt');
+  rewrite(f);
+  randomize;
+  len := random(64) + 64;
+  for i := 1 to len do
+    begin
+      j := random(64) + 1;
+      write(f, j);
+    end;
+  close(f);
+  reset(f);
+  i := 1;
+  while not EOF(f) do
+    begin
+      read(f, j);
+      arr[i + 1] := j;
+      i := i + 1;
+    end;
+  close(f);
+  rewrite(g);
+  for i := len + 1 downto 1 do
+    write(g, arr[i]);
+  close(g);
+  reset(f);
+  writeln('File F:');
+  while not EOF(f) do
+    begin
+      read(f, j);
+      write(j);
+    end;
+  writeln;
+  close(f);
+  reset(g);
+  writeln('File G:');
+  while not EOF(g) do
+    begin
+      read(g, j);
+      write(j);
+    end;
+  close(g);
+  readln;
+end.
