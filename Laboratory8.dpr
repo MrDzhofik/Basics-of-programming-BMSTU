@@ -29,12 +29,12 @@ begin
   while not EOF(f) do
     begin
       read(f, j);
-      arr[i + 1] := j;
+      arr[i] := j;
       i := i + 1;
     end;
   close(f);
   rewrite(g);
-  for i := len + 1 downto 2 do
+  for i := len downto 1 do
     write(g, arr[i]);
   close(g);
   reset(f);

@@ -10,7 +10,7 @@ uses
 type foi = file of integer;
 var f, g: foi;
     len, i, j: integer;
-    arr: array of integer;
+    arr: array[1..128] of integer;
 
 begin
   AssignFile(f, 'f.txt');
@@ -25,33 +25,24 @@ begin
     end;
   close(f);
   reset(f);
-  i := 0;
+  i := 1;
   while not EOF(f) do
     begin
       read(f, j);
-      arr[i] := j;
+      arr[i + 1] := j;
       i := i + 1;
     end;
   close(f);
   rewrite(g);
-  for i := len - 1 to 0 do
+  for i := len + 1 downto 2 do
     write(g, arr[i]);
-  close(g);
-  reset(g);
-  writeln('File G:');
-  while not Eof(g) do
-    begin
-      read(g, j);
-      write(j);
-    end;
-  writeln;
   close(g);
   reset(f);
   writeln('File F:');
   while not EOF(f) do
     begin
       read(f, j);
-      write(j);
+      write(j, ' ');
     end;
   writeln;
   close(f);
@@ -60,7 +51,7 @@ begin
   while not EOF(g) do
     begin
       read(g, j);
-      write(j);
+      write(j, ' ');
     end;
   close(g);
   readln;
