@@ -5,8 +5,7 @@ program Laboratory9;
 {$R *.res}
 
 uses
-  System.SysUtils;
-type ptoy = ^toy;
+  System.SysUtils;                                      type ptoy = ^toy;
      toy = record
        name: string[15];
        price: single;
@@ -83,8 +82,8 @@ begin
      begin
        if (tprice <= q^.next^.price) and not key then
          begin
-           pbox := q^.next;
            new(tp);
+           pbox := q^.next;
            q^.next := tp;
            tp^.next := pbox;
            tp^.name := tname;
@@ -95,7 +94,6 @@ begin
      end;
    if not key then
      begin
-       q := q^.next;
        new(tp);
        q^.next := tp;
        tp^.name := tname;
@@ -104,5 +102,11 @@ begin
      end;
 
    // 4) Вывод списка
+   q := first;
+   while q <> nil do
+     begin
+       writeln('Toy name: ', q^.name, ', Toy price: ', q^.price:3:0, '$');
+       q := q^.next;
+     end;
    readln;
 end.

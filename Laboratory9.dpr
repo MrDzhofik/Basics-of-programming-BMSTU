@@ -81,10 +81,10 @@ begin
    key := False;
    while q^.next <> nil do
      begin
-       if (tprice <= q^.next^.price) and not key then
+       if (tprice <= q^.price) and not key then
          begin
-           pbox := q^.next;
            new(tp);
+           pbox := q^.next;
            q^.next := tp;
            tp^.next := pbox;
            tp^.name := tname;
@@ -107,6 +107,14 @@ begin
    while q <> nil do
      begin
        writeln('Toy name: ', q^.name, ', Toy price: ', q^.price:3:0, '$');
+       q := q^.next;
+     end;
+
+   // 5) Очистка памяти
+   q := first;
+   while q <> nil do
+     begin
+       dispose(q);
        q := q^.next;
      end;
    readln;

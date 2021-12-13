@@ -83,8 +83,8 @@ begin
      begin
        if (tprice <= q^.next^.price) and not key then
          begin
-           pbox := q^.next;
            new(tp);
+           pbox := q^.next;
            q^.next := tp;
            tp^.next := pbox;
            tp^.name := tname;
@@ -95,15 +95,19 @@ begin
      end;
    if not key then
      begin
-       q := q^.next;
        new(tp);
        q^.next := tp;
        tp^.name := tname;
        tp^.price := tprice;
        tp^.next := nil;
-
      end;
 
    // 4) Вывод списка
+   q := first;
+   while q <> nil do
+     begin
+       writeln('Toy name: ', q^.name, ', Toy price: ', q^.price:3:0, '$');
+       q := q^.next;
+     end;
    readln;
 end.
