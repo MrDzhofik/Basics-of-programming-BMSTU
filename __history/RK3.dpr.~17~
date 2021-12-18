@@ -1,0 +1,108 @@
+program RK3;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type ptr = ^list;
+     list = record
+       value: integer;
+       next: ptr;
+     end;
+var q, tp, first_list, second_list, sum_list, temp, hook: ptr;
+    len, k, i, j: integer;
+begin
+  writeln('Enter length of lists:');
+  readln(len);
+  randomize;
+  new(first_list);
+  first_list.value := random(128) + 1;
+  first_list.next := nil;
+  q := first_list;
+  for i := 1 to len - 1 do
+    begin
+      new(tp);
+      q.next := tp;
+      tp.value := random(128) + 1;
+      tp.next := nil;
+      q := tp;
+      tp := nil;
+    end;
+
+  new(second_list);
+  second_list.value := random(128) + 1;
+  second_list.next := nil;
+  q := second_list;
+  for i := 1 to len - 1 do
+    begin
+      new(tp);
+      q.next := tp;
+      tp.value := random(128) + 1;
+      tp.next := nil;
+      q := tp;
+      tp := nil;
+    end;
+
+
+  new(sum_list);
+  q := first_list;
+  tp := second_list;
+  hook := sum_list;
+  for i := 1 to len do
+    begin
+      hook.value := q.value + tp.value;
+      q := q.next;
+      tp := tp.next;
+      new(temp);
+      hook.next := temp;
+      hook := temp;
+    end;
+
+  writeln('First list:');
+  q := first_list;
+  for i := 1 to len do
+    begin
+      write(q.value:4, ' x^', len - i + 1);
+      q := q.next;
+    end;
+  writeln;
+
+  writeln('Second list:');
+  tp := second_list;
+  for i := 1 to len do
+    begin
+      write(tp.value:4, ' x^', len - i + 1);
+      tp := tp.next;
+    end;
+  writeln;
+
+  writeln('Sum list');
+  hook := sum_list;
+  for i := 1 to len do
+    begin
+      write(hook.value:4, ' x^', len - i + 1);
+      hook := hook.next;
+    end;
+  writeln;
+
+  q := first_list;
+  tp := second_list;
+  hook := sum_list;
+  while q <> nil do
+    begin
+      dispose(q);
+      dispose(tp);
+      dispose(hook);
+      q := q.next;
+      tp := tp.next;
+      hook := hook.next;
+    end;
+  writeln('Deleting finished');
+
+  readln;
+
+
+end.
