@@ -36,7 +36,7 @@ begin
   audi.print;
   writeln;
   bmw.Init('BMW M3', 320);
-  writeln('Транспортный налог: ', bmw.tax);
+  writeln('Транспортный налог: ', bmw.tax');
   bmw.print;
   writeln;
   mercedes.Init('Mercedes Mclaren', 500);

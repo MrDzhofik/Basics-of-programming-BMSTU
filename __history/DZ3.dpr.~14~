@@ -27,24 +27,23 @@ procedure Сar.print;
     writeln('Марка: ', mark);
     writeln('Мощность: ', poe)
   end;
-
-var audi, bmw, mercedes, volga: Сar;
+var audi: Сar;
+    bmw: Car;
+    mercedes: Car;
+    volga: Car;
 
 begin
   audi.Init('Audi TT', 210);
   writeln('Транспортный налог: ', audi.tax);
   audi.print;
-  writeln;
   bmw.Init('BMW M3', 320);
   writeln('Транспортный налог: ', bmw.tax);
   bmw.print;
-  writeln;
   mercedes.Init('Mercedes Mclaren', 500);
   writeln('Транспортный налог: ', mercedes.tax);
   mercedes.print;
-  writeln;
-  volga.Init('Волга 2110', 210);
-  writeln('Транспортный налог: ', volga.tax);
-  volga.print;
+  volga.Init('Audi', 210);
+  writeln('Транспортный налог: ', audi.tax);
+  audi.print;
   readln;
 end.
