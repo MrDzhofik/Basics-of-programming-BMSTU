@@ -1,0 +1,137 @@
+program Project2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+Type tpel=^element;
+
+Element = record
+
+Inf:char;
+
+P:tpel;
+
+End;
+
+Var first, f, a, q:tpel;
+
+Begin
+
+//Ввод исходных данных, формирование списка и вывод его на экран}
+
+Writeln ('input list: ');
+
+New (first);
+
+Readln(first^.inf);
+
+First^.p:=nil;
+
+F:=first;
+
+While not EOF do
+
+Begin
+
+New(q);
+
+Readln(q^.inf);
+
+Q^.p:=nil;
+
+F^.p:=q;
+
+F:=f^.p;
+
+End;
+
+Writeln('start list: ');
+
+Q:=first;
+
+While q<>nil do
+
+Begin
+
+Write (q^.inf, ' ');
+
+Q:=q^.p;
+
+End;
+
+Writeln;
+
+//Вставка нулей перед первым и последним элементами
+
+//before 1
+
+New(q);
+
+Q^.inf:='0';
+
+Q^.p:=first;
+
+First:=q;
+
+//before last
+
+A:=first;
+
+While a^.p<>nil do
+
+Begin
+
+A:=a^.p;
+
+End;
+
+New(q);
+
+A^.p:=q;
+
+Q^.inf:=a^.inf;
+
+Q^.p:=nil;
+
+A^.inf:='0';
+
+//Вывод полученного списка
+
+Writeln('new list: ');
+
+F:=first;
+
+While f<>nil do
+
+Begin
+
+Write(f^.inf, ' ');
+
+F:=f^.p;
+
+End;
+
+Writeln;
+
+//Освобождение памяти
+
+While first<>nil do
+
+Begin
+
+Q:=first;
+
+First:=first^.p;
+
+Dispose(q);
+
+End;
+
+Writeln(‘list is cleared’);
+
+Readln;
+
+End.

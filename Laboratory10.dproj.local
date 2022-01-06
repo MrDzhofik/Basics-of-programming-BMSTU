@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.776,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.471,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Notebook.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.803,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.962,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Notebook_2.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.786,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Notebook_1.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.471,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Notebook.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.962,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Notebook_2.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.420,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Laboratory10.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.786,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Notebook_1.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.587,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

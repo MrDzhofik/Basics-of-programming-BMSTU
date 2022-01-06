@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2021.12.20 15:51:59.676,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2021.12.20 15:53:07.800,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\C_unit.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
-    <Transaction>2021.12.20 15:53:07.800,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\C_unit.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2021.12.20 15:53:42.087,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Culc.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.800,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\C_unit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.676,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.800,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\C_unit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.087,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Culc.dproj</Transaction>
   </Transactions>
 </BorlandProject>

@@ -6,7 +6,102 @@ program DZ3;
 
 uses
   System.SysUtils;
+
+type Snowball = object
+  private diametr: integer;
+  procedure Init(d: integer);
+  procedure Print;
+  function Show: integer;
+  function Weight: integer;
+end;
+procedure Snowball.Init;
+  begin
+    diametr := d;
+  end;
+procedure Snowball.Print;
+  begin
+    writeln('Диаметр снежного кома: ', diametr);
+  end;
+function Snowball.Show;
+  begin
+    Result := diametr;
+  end;
+function Snowball.Weight;
+  begin
+    Result := diametr * 300;
+  end;
+
+type Snowman = object
+  private name: string[15];
+  private snowballs: array[1..7] of Snowball;
+  private len: integer;
+  procedure Init(n: string; arr: array of Snowball; l:integer);
+  procedure Print;
+  function Height: integer;
+  function Weight: integer;
+end;
+procedure Snowman.Init;
+  begin
+    var i: integer;
+    len := l;
+    i := 0;
+    for i := 0 to len - 1 do
+      snowballs[i + 1] := arr[i];
+    name := n;
+  end;
+procedure Snowman.Print;
+  begin
+    writeln('Имя снеговика: ', name);
+  end;
+function Snowman.Height;
+  begin
+    var i, sum: integer;
+    sum := 0;
+    for i := 1 to len do
+      sum := sum + snowballs[i].diametr;
+    Result := sum;
+  end;
+function Snowman.Weight;
+  begin
+    var i, sum: integer;
+    sum := 0;
+    for i := 1 to len do
+      sum := sum + snowballs[i].Weight;
+    Result := sum;
+  end;
+
+var first, second, third: Snowball;
+    man: Snowman;
+    arr: array[1..3] of Snowball;
+    i: integer;
 begin
+  i := 1;
+  randomize();
+  first.Init(random(20) + 1);
+  first.Print;
+  writeln('Вес: ', first.Weight);
+  arr[i] := first;
+  i := i + 1;
+  writeln;
+  second.Init(random(15) + 1);
+  second.Print;
+  writeln('Вес: ', second.Weight);
+  arr[i] := second;
+  i := i + 1;
+  writeln;
+  third.Init(random(25) + 1);
+  third.Print;
+  writeln('Вес: ', third.Weight);
+  arr[i] := third;
+  writeln;
+
+  man.Init('Michael', arr, 3);
+  man.Print;
+  writeln('Высота: ', man.Height);
+  writeln('Вес: ', man.Weight);
+  man.Height;
+  man.Weight;
+  readln;
 end.
 //type Citizen = object         // Part 2
 //    private FIO: string[25];
