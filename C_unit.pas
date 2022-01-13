@@ -43,10 +43,10 @@ procedure operate;
     n:real;
 
   begin
-    s:=Form2.Edit1.text;  {  читаем сроку из параметра text Edit1}
-    Form2.Edit1.clear;   {  очищаем Edit1}
-    val(s,n,code);  {  преобразуем строку в число}
-      case operation of        { выполняем операцию}
+    s:=Form2.Edit1.text;
+    Form2.Edit1.clear;
+    val(s,n,code);
+      case operation of
        '@': sum:=n;
        '+': sum:=sum+n;
        '-': sum:=sum-n;
@@ -57,34 +57,34 @@ procedure operate;
 
 procedure TForm2.Button1Click(Sender: TObject);
   begin
-    Edit1.Clear;       { очистить окно компонента Edit1}
-    operation:='@';  { установить состояние “первая операция “}
-    Edit1.setfocus;   { установить активным окно компонента Edit1}
+    Edit1.Clear;
+    operation:='@';
+    Edit1.setfocus;
   end;
 procedure TForm2.Button2Click(Sender: TObject);
   var s:string;
     begin
-      operate;     { выполнить предыдущую операцию}
-      str(sum:6:3,s);  { преобразовать результат в строку}
-      Edit1.text:=s;     { вывести строку в окно компонента Edit1}
+      operate;
+      str(sum:6:3,s);
+      Edit1.text:=s;
       operation:='@';
-      Edit1.setfocus;   { установить курсор на кнопку Button1}
+      Edit1.setfocus;
   end;
 
 
 procedure TForm2.Button3Click(Sender: TObject);
   begin
-    operate; { выполнить предыдущую операцию}
-    operation:='+'; { установить состояние "операция +"}
-    Edit1.setfocus; { установить активным окно компонента Edit1}
+    operate;
+    operation:='+';
+    Edit1.setfocus;
   end;
 
 
 procedure TForm2.Button4Click(Sender: TObject);
   begin
-    operate; { выполнить предыдущую операцию}
-    operation:='-';  { установить состояние "операция +"}
-    Edit1.setfocus; { установить активным окно компонента Edit1}
+    operate;
+    operation:='-';
+    Edit1.setfocus;
   end;
 
 
@@ -104,7 +104,7 @@ procedure TForm2.Button6Click(Sender: TObject);
 
 procedure TForm2.Button7Click(Sender: TObject);
   begin
-    Close;   {  Завершение работы приложения}
+    Close;
   end;
 
 

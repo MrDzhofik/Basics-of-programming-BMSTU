@@ -26,16 +26,11 @@ type
   public
     { Public declarations }
   end;
-
-
 var
   Form3: TForm3;
-
 implementation
 uses Notebook;
-
 {$R *.dfm}
-
 procedure TForm3.Button1Click(Sender: TObject);
 var c:integer;
     fam:string[22];
