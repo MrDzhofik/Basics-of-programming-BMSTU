@@ -1,0 +1,49 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var a: integer;
+    b: real;
+    s: string;
+    p1, p2: ^integer;
+    p3: ^real;
+    p: pointer;
+    arr: array[1..5] of integer;
+    procedure sum(h:integer);
+    begin
+      h := 6;
+    end;
+
+
+
+begin
+  a := 5;
+  b := 4.32;
+  sum(a);
+//  writeln(a);
+//  p1 := @a;
+//  p3 := @b;
+//  p2 := p1;
+//  p := p3;
+//  p1 := p;
+//  writeln(p1^);
+  writeln(DiskFree(0));
+  writeln(DiskFree(1));
+  writeln(DiskFree(2));
+  writeln(DiskFree(3));
+  writeln(DiskFree(4));
+  writeln(DiskFree(5));
+//  try
+//    { TODO -oUser -cConsole Main : Insert code here }
+//  except
+//    on E: Exception do
+//      Writeln(E.ClassName, ': ', E.Message);
+//  end;
+
+  readln;
+end.
