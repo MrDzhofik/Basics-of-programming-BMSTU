@@ -7,59 +7,100 @@ program Preparation;
 uses
   System.SysUtils;
 
+Type Cshar = object
+  public value_ch: char;
+  public procedure Init(c:char);
+  public procedure Print;
+end;
+procedure Cshar.Init;
+  begin
+    value_ch := c;
+  end;
+procedure Cshar.Print;
+  begin
+    write(value_ch);
+  end;
 
-Type pTRoomD=^TRoomD;
-     TRoomD=object
-               length, width:single;
-               function Square:single; virtual;
-               constructor Init(l,w:single);
-               destructor Done; virtual;
-             end;
-Type pTBRoomD=^TBRoomD;
-     TBRoomD=object(TRoomD)
-                pB:pTRoomD;
-                function Square:single; virtual;
-                function BSquare:single;
-                constructor Init(l,w:single;
-                                         lb,wb:single);
-                destructor Done; virtual;
-              end;
-Function TRoomD.Square;
-   Begin Square:= length* width; End;
-Constructor TRoomD.Init;
-   Begin length:=l;  width:=w; End;
-Destructor TRoomD.Done;
-  Begin End;
-Constructor TBRoomD.Init;
-  Begin   inherited Init(l,w);
-    if (lb=0)or(wb=0) then pB:=nil
-    else pB:= New(pTRoomD,Init(lb,wb));
-  End;
-Function TBRoomD.BSquare;
-  Begin if pB<>nil then BSquare:=pB^.Square
-                   else BSquare:=0;
-  End;
-Function TBRoomD. Square;
-  Begin Square:= inherited Square+BSquare; End;
-Destructor TBRoomD.Done;
-   Begin if pB<>nil then Dispose(pB,Done); End;
+type CharAndInt = object
+  private value_c: char;
+  private value_int: integer;
+  public procedure Init(c:char; i:integer);
+  public procedure Print;
+end;
+procedure CharAndInt.Init;
+  begin
+    value_c := c;
+    value_int := i;
+  end;
 
-Var A:TBRoomD; pB1:pTBRoomD; pB2:pTRoomD;
-Begin
-  {статический объект с динамическим полем}
-  A.Init(3.2,5.1,2.5,1);
-  WriteLn(A.Square:6:2,A.BSquare:6:2);
-  A.Done;
-  {динамический полиморфный объект с динамическим полем}
-  pB1:=New(pTBRoomD,Init(3.3,5.2,2.6,0));
-  WriteLn(pB1^.Square:6:2,pB1^.BSquare:6:2);
-  Dispose(pB1,Done);
-  {динамический полиморфный объект с динамическим полем}
-  pB2:=new(pTBRoomD,Init(3.1,5.4,2.5,1.1));
-  WriteLn(pB2^.Square:6:2,pTBRoomD(pB2)^.BSquare:6:2);
-  Dispose(pB2,Done);
-  ReadLn;
-End.
+procedure CharAndInt.Print;
+  begin
+    writeln;
+    writeln(value_c);
+    writeln(value_int);
+  end;
+
+var A:Cshar;
+    B: CharAndInt;
+begin
+  A.Init('G');
+  A.Print;
+  B.Init(A.value_ch, 9);
+  B.Print;
+  readln;
+end.
+//Type pTRoomD=^TRoomD;
+//     TRoomD=object
+//               length, width:single;
+//               function Square:single; virtual;
+//               constructor Init(l,w:single);
+//               destructor Done; virtual;
+//             end;
+//Type pTBRoomD=^TBRoomD;
+//     TBRoomD=object(TRoomD)
+//                pB:pTRoomD;
+//                function Square:single; virtual;
+//                function BSquare:single;
+//                constructor Init(l,w:single;
+//                                         lb,wb:single);
+//                destructor Done; virtual;
+//              end;
+//Function TRoomD.Square;
+//   Begin Square:= length* width; End;
+//Constructor TRoomD.Init;
+//   Begin length:=l;  width:=w; End;
+//Destructor TRoomD.Done;
+//  Begin End;
+//Constructor TBRoomD.Init;
+//  Begin   inherited Init(l,w);
+//    if (lb=0)or(wb=0) then pB:=nil
+//    else pB:= New(pTRoomD,Init(lb,wb));
+//  End;
+//Function TBRoomD.BSquare;
+//  Begin if pB<>nil then BSquare:=pB^.Square
+//                   else BSquare:=0;
+//  End;
+//Function TBRoomD. Square;
+//  Begin Square:= inherited Square+BSquare; End;
+//Destructor TBRoomD.Done;
+//   Begin if pB<>nil then Dispose(pB,Done); End;
+//
+//Var A:TBRoomD; pB1:pTBRoomD; pB2:pTRoomD;
+//Begin
+//  {статический объект с динамическим полем}
+//  A.Init(3.2,5.1,2.5,1);
+//  WriteLn(A.Square:6:2,A.BSquare:6:2);
+//  A.Done;
+//  {динамический полиморфный объект с динамическим полем}
+//  pB1:=New(pTBRoomD,Init(3.3,5.2,2.6,0));
+//  WriteLn(pB1^.Square:6:2,pB1^.BSquare:6:2);
+//  Dispose(pB1,Done);
+//  {динамический полиморфный объект с динамическим полем}
+//  pB2:=new(pTBRoomD,Init(3.1,5.4,2.5,1.1));
+//  WriteLn(pB2^.Square:6:2,pTBRoomD(pB2)^.BSquare:6:2);
+//  Dispose(pB2,Done);
+//  ReadLn;
+//End.
 
 //type TroomP=object
 //    length, width:single;
