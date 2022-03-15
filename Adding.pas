@@ -7,19 +7,19 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, General;
 
 type
-  TForm3 = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Button1: TButton;
-    Button2: TButton;
-    procedure Button2Click(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+  TAddForm = class(TForm)
+    NameLabel: TLabel;
+    SupplierLabel: TLabel;
+    QuantityLabel: TLabel;
+    PriceLabel: TLabel;
+    NameEdit: TEdit;
+    SupplierEdit: TEdit;
+    QuantityEdit: TEdit;
+    PriceEdit: TEdit;
+    AddButton: TButton;
+    ExitButton: TButton;
+    procedure ExitButtonClick(Sender: TObject);
+    procedure AddButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,29 +28,29 @@ type
 
 
 var
-  Form3: TForm3;
+  AddForm: TAddForm;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm3.Button1Click(Sender: TObject);
+procedure TAddForm.AddButtonClick(Sender: TObject);
 begin
-  rec.name := Edit1.text;
-  rec.provider := Edit2.text;
-  rec.quantity := StrToInt(Edit3.text);
-  rec.price := StrToInt(Edit4.text);
-  Edit1.clear;
-  Edit2.clear;
-  Edit3.clear;
-  Edit4.clear;
+  rec.name := NameEdit.text;
+  rec.provider := SupplierEdit.text;
+  rec.quantity := StrToInt(QuantityEdit.text);
+  rec.price := StrToInt(PriceEdit.text);
+  NameEdit.clear;
+  SupplierEdit.clear;
+  QuantityEdit.clear;
+  PriceEdit.clear;
   write(fil, rec);
-  Edit1.setfocus;
+  NameEdit.setfocus;
   Application.MessageBox('Продукт успешно добавлен', 'Симулятор рынка',mb_Ok);
 
 end;
 
-procedure TForm3.Button2Click(Sender: TObject);
+procedure TAddForm.ExitButtonClick(Sender: TObject);
 begin
     Close;
 end;

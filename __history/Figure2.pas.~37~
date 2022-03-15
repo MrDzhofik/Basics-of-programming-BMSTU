@@ -1,0 +1,77 @@
+unit Figure2;
+
+interface
+uses graphics, ExtCtrls;
+
+type TFigure=Class
+  x, y: integer;
+  Image: TImage;
+  constructor Create(ax, ay: integer; aImage: TImage);  virtual;
+  procedure Draw; virtual; abstract;
+  procedure Move(t: single);
+End;
+type TRect = Class(TFigure)
+  procedure Draw; override;
+end;
+
+type TRhomb = Class(TFigure)
+  d, h: integer;
+  constructor Create(ax, ay, ad, ah: integer; aImage:TImage);
+  procedure Draw; override;
+end;
+
+var
+  flag: boolean = false;
+  Rect: Trect;
+  Rhomb: TRhomb;
+  time: real;
+
+implementation
+uses Part_2;
+
+constructor TFigure.Create;
+  begin
+    x := ax;
+    y := ay;
+    Image := aImage;
+  end;
+
+procedure TFigure.Move;
+  begin
+    if (x >= 1207) then
+      flag := True
+    else if (x <= 0) then
+       flag := False;
+    Image.Canvas.Pen.Color := clwhite;
+    Draw();
+    Image.Canvas.Pen.Color := clBlack;
+    if flag then
+      x := x - 2
+    else
+      x := x + 2;
+    Draw;
+  end;
+
+procedure TRect.Draw;
+  begin
+    Image.Canvas.Rectangle(x, y, x + 200, y + 200);
+  end;
+
+constructor TRhomb.Create;
+  begin
+    inherited Create(ax, ay, aImage);
+    d := ad;
+    h := ah;
+  end;
+
+procedure TRhomb.Draw;
+  begin
+    Image.Canvas.MoveTo(x, y - (h div 2));
+    Image.Canvas.LineTo(x + (d div 2), y);
+    Image.Canvas.LineTo(x, y + (h div 2));
+    Image.Canvas.LineTo(x - (d div 2), y);
+    Image.Canvas.LineTo(x, y - (h div 2));
+  end;
+
+
+end.

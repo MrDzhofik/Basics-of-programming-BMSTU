@@ -7,15 +7,15 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-  TForm4 = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Button1: TButton;
-    Button2: TButton;
-    procedure Button2Click(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+  TDeleteForm = class(TForm)
+    NameLabel: TLabel;
+    SupplierButton: TLabel;
+    NameEdit: TEdit;
+    SupplierEdit: TEdit;
+    DeleteButton: TButton;
+    ExitButton: TButton;
+    procedure ExitButtonClick(Sender: TObject);
+    procedure DeleteButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,13 +23,13 @@ type
   end;
 
 var
-  Form4: TForm4;
+  DeleteForm: TDeleteForm;
 
 implementation
 uses General;
 {$R *.dfm}
 
-procedure TForm4.Button1Click(Sender: TObject);
+procedure TDeleteForm.DeleteButtonClick(Sender: TObject);
 var c : integer;
     name, provider : string[22];
     reserve: file of Product;
@@ -38,8 +38,8 @@ begin
     rewrite(reserve);
     reset(fil);
     c := 1;
-    name := Edit1.text;
-    provider := Edit2.text;
+    name := NameEdit.text;
+    provider := SupplierEdit.text;
     while not EOF(fil) do
       begin
         read(fil, rec);
@@ -63,11 +63,11 @@ begin
          end;
          Application.MessageBox('Продукт успешно удален', 'Симулятор рынка',mb_Ok);
      end;
-     Edit1.Clear;
-     Edit2.Clear;
+     NameEdit.Clear;
+     SupplierEdit.Clear;
 end;
 
-procedure TForm4.Button2Click(Sender: TObject);
+procedure TDeleteForm.ExitButtonClick(Sender: TObject);
 begin
   Close();
 end;

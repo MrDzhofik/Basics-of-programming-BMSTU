@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.614,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.218,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\DZ1_2022.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\DZ1_2022.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.291,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\DZ1_2022.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Part_1.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.584,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.147,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Greeting.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Greeting.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.916,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Part_2.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.361,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Main.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Part_1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.916,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Part_2.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.000,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Part_1.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.735,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Main.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.361,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Main.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Part_1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.962,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Figure2.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.735,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Main.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Greeting.pas"/>
+    <File Path="Greeting.dfm"/>
+    <File Path="Main.pas"/>
+    <File Path="Main.dfm"/>
+    <File Path="Part_2.pas"/>
+    <File Path="Part_2.dfm"/>
+    <File Path="Figure2.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

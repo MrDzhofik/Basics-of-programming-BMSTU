@@ -1,0 +1,16 @@
+program DZ1_2022;
+
+uses
+  Vcl.Forms,
+  Part_1 in 'Part_1.pas' {Form2},
+  Greeting in 'Greeting.pas' {Choice};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TChoice, Choice);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

@@ -7,16 +7,16 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-  TForm2 = class(TForm)
-    Label1: TLabel;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
-    procedure Button1Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+  TMainForm = class(TForm)
+    Name: TLabel;
+    AddButton: TButton;
+    DeleteButton: TButton;
+    OtherButton: TButton;
+    ExitButton: TButton;
+    procedure AddButtonClick(Sender: TObject);
+    procedure ExitButtonClick(Sender: TObject);
+    procedure DeleteButtonClick(Sender: TObject);
+    procedure OtherButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,7 +32,7 @@ type Product = record
 end;
 
 var
-  Form2: TForm2;
+  MainForm: TMainForm;
   fil: file of Product;
   rec: Product;
 
@@ -41,7 +41,7 @@ implementation
 {$R *.dfm}
 uses Adding, Deleting;
 
-procedure TForm2.Button1Click(Sender: TObject);
+procedure TMainForm.AddButtonClick(Sender: TObject);
 var size:integer;
 begin
    AssignFile(fil,'Market.dat');
@@ -52,24 +52,24 @@ begin
       end
    else
      rewrite(fil);
-   Form3.Show;
-   Form3.edit1.setfocus;
+   AddForm.Show;
+   AddForm.NameEdit.setfocus;
 end;
 
-procedure TForm2.Button2Click(Sender: TObject);
+procedure TMainForm.DeleteButtonClick(Sender: TObject);
 begin
     AssignFile(fil,'Market.dat');
     {$I-} Reset(fil); {$I+}
     if IOResult=0 then
       begin
-        Form4.show;
-        Form4.edit1.setfocus;
+        DeleteForm.show;
+        DeleteForm.NameEdit.setfocus;
       end
     else
       MessageDlg('Нет продуктов', mtError, [mbOk], 0);
 end;
 
-procedure TForm2.Button3Click(Sender: TObject);
+procedure TMainForm.OtherButtonClick(Sender: TObject);
 begin
     AssignFile(fil,'Market.dat');
    {$I-} Reset(fil); {$I+}
@@ -80,7 +80,7 @@ begin
      writeln('File not found');
 end;
 
-procedure TForm2.Button4Click(Sender: TObject);
+procedure TMainForm.ExitButtonClick(Sender: TObject);
 begin
    Close;
 end;

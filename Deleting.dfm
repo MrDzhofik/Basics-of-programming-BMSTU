@@ -1,7 +1,7 @@
-object Form4: TForm4
+object DeleteForm: TDeleteForm
   Left = 0
   Top = 0
-  Caption = 'Form4'
+  Caption = 'DeleteForm'
   ClientHeight = 292
   ClientWidth = 451
   Color = clBtnFace
@@ -13,7 +13,7 @@ object Form4: TForm4
   OldCreateOrder = False
   PixelsPerInch = 120
   TextHeight = 16
-  object Label1: TLabel
+  object NameLabel: TLabel
     Left = 104
     Top = 59
     Width = 116
@@ -26,7 +26,7 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
   end
-  object Label2: TLabel
+  object SupplierButton: TLabel
     Left = 104
     Top = 137
     Width = 85
@@ -39,21 +39,21 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
   end
-  object Edit1: TEdit
+  object NameEdit: TEdit
     Left = 240
     Top = 58
     Width = 121
     Height = 24
     TabOrder = 0
   end
-  object Edit2: TEdit
+  object SupplierEdit: TEdit
     Left = 240
     Top = 133
     Width = 121
     Height = 24
     TabOrder = 1
   end
-  object Button1: TButton
+  object DeleteButton: TButton
     Left = 114
     Top = 225
     Width = 75
@@ -66,9 +66,9 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    OnClick = Button1Click
+    OnClick = DeleteButtonClick
   end
-  object Button2: TButton
+  object ExitButton: TButton
     Left = 264
     Top = 225
     Width = 75
@@ -81,6 +81,6 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    OnClick = Button2Click
+    OnClick = ExitButtonClick
   end
 end

@@ -99,15 +99,19 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="General.pas">
-            <Form>Form2</Form>
+            <Form>MainForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Adding.pas">
-            <Form>Form3</Form>
+            <Form>AddForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Deleting.pas">
-            <Form>Form4</Form>
+            <Form>DeleteForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Other.pas">
+            <Form>Form5</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

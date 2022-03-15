@@ -1,0 +1,218 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls,
+  Vcl.Samples.Spin, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    Label1: TLabel;
+    AngleLabel: TLabel;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    AngleEdit: TEdit;
+    SpinButton1: TSpinButton;
+    SpinButton2: TSpinButton;
+    SpinButton3: TSpinButton;
+    FirstImage: TImage;
+    CleanButton: TButton;
+    StartButton: TButton;
+    ExitButton: TButton;
+    ColorChoice: TRadioGroup;
+    procedure FirstImageMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure CleanButtonClick(Sender: TObject);
+    procedure SpinButton1DownClick(Sender: TObject);
+    procedure SpinButton1UpClick(Sender: TObject);
+    procedure ExitButtonClick(Sender: TObject);
+    procedure StartButtonClick(Sender: TObject);
+    procedure SpinButton2DownClick(Sender: TObject);
+    procedure SpinButton2UpClick(Sender: TObject);
+    procedure SpinButton3DownClick(Sender: TObject);
+    procedure SpinButton3UpClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+  type TRect = record
+         case Integer of
+           0: (Left, Top, Right, Bottom: Integer);
+           1: (TopLeft, BottomRight: TPoint);
+         end;
+  type TCircuit = record
+    Center_x, Center_y, Radius: integer;
+  end;
+
+  type Tline = record
+    Left, Top: integer;
+  end;
+
+
+var
+  Form2: TForm2;
+  Rect : TRect;
+  Circuit: TCircuit;
+  Line: Tline;
+  rad, len, angle: integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.CleanButtonClick(Sender: TObject);
+begin
+   Image1.Picture := nil;
+   Image1.Canvas.Brush.Color := clWhite;
+end;
+
+procedure TForm2.StartButtonClick(Sender: TObject);
+begin
+var x, y, rad, len, angle, dx, dy: integer; var radian : extended;
+  case RadioGroup1.ItemIndex of
+    0 : Image1.Canvas.Brush.Color := clRed;
+    1 : Image1.Canvas.Brush.Color := clGreen;
+    2 : Image1.Canvas.Brush.Color := clBlue;
+    3 : Image1.Canvas.Brush.Color := clBlack;
+    4 : Image1.Canvas.Brush.Color := clYellow;
+    5 : Image1.Canvas.Brush.Color := clWhite;
+  end;
+  if Edit1.text <> '' then
+    begin
+      x := Circuit.Center_x;
+      y := Circuit.Center_y;
+      rad := StrToInt(Edit1.text);
+      Image1.Canvas.Ellipse(x - rad, y - rad, x + rad, y + rad);
+      Edit1.clear;
+    end
+  else if ((Edit2.text <> '') and (Edit3.text <> '')) then
+    begin
+      x := Line.Left;
+      y := Line.Top;
+      angle := StrToInt(Edit3.text);
+      len := StrToInt(Edit2.text);
+      radian := angle/180 * pi;
+      dx := round(len*(cos(radian)));
+      dy := round(len*(sin(radian)));
+      Image1.Canvas.MoveTo(x, y);
+      Image1.Canvas.LineTo(X + dx, Y - dy);
+      Edit2.clear;
+      Edit3.clear;
+    end;
+end;
+
+procedure TForm2.ExitButtonClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TForm2.FormActivate(Sender: TObject);
+begin
+  Image1.Picture := nil;
+  Image1.Canvas.Brush.Color := clWhite;
+end;
+
+procedure TForm2.FirstImageMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  if Button = mbLeft then
+    begin
+      Line.Left:=x;
+      Line.Top:=y;
+      Label2.Enabled := True;
+      Label3.Enabled := True;
+      Label1.Enabled := False;
+      Edit2.Enabled := True;
+      Edit3.Enabled := True;
+      Edit1.Enabled := False;
+      SpinButton1.Enabled := False;
+      SpinButton2.Enabled := True;
+      SpinButton3.Enabled := True;
+      Edit2.setfocus;
+    end
+  else
+    begin
+      Circuit.Center_x := x;
+      Circuit.Center_y := y;
+      Label1.Enabled := True;
+      Label2.Enabled := False;
+      Label3.Enabled := False;
+      Edit1.Enabled := True;
+      Edit2.Enabled := False;
+      Edit3.Enabled := False;
+      SpinButton1.Enabled := True;
+      SpinButton2.Enabled := False;
+      SpinButton3.Enabled := False;
+      Edit1.setfocus;
+    end;
+end;
+
+procedure TForm2.SpinButton1DownClick(Sender: TObject);
+begin
+    if Edit1.text <> '' then
+       rad := StrtoInt(Edit1.text)
+    else
+      rad := 0;
+    rad := rad - 1;
+    Edit1.text := IntToStr(rad);
+end;
+
+procedure TForm2.SpinButton1UpClick(Sender: TObject);
+begin
+    if Edit1.text <> '' then
+       rad := StrtoInt(Edit1.text)
+    else
+      rad := 0;
+    rad := rad + 1;
+    Edit1.text := IntToStr(rad);
+end;
+
+procedure TForm2.SpinButton2DownClick(Sender: TObject);
+begin
+  if Edit2.text <> '' then
+    len := StrtoInt(Edit2.text)
+  else
+    len := 0;
+  len := len - 1;
+  Edit2.text := IntToStr(len);
+end;
+
+procedure TForm2.SpinButton2UpClick(Sender: TObject);
+begin
+  if Edit2.text <> '' then
+    len := StrtoInt(Edit2.text)
+  else
+    len := 0;
+  len := len + 1;
+  Edit2.text := IntToStr(len);
+end;
+
+procedure TForm2.SpinButton3DownClick(Sender: TObject);
+begin
+  if Edit3.text <> '' then
+    angle := StrtoInt(Edit3.text)
+  else
+    angle := 0;
+  angle := angle + 1;
+  Edit3.text := IntToStr(angle);
+end;
+
+procedure TForm2.SpinButton3UpClick(Sender: TObject);
+begin
+  if Edit3.text <> '' then
+    angle := StrtoInt(Edit3.text)
+  else
+    angle := 0;
+  angle := angle + 1;
+  Edit3.text := IntToStr(angle);
+end;
+
+end.
