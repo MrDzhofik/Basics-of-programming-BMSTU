@@ -2,22 +2,34 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>1899.12.30 00:00:00.000.514,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Pracicum1.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\DZ1_2022.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.411,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Max.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.396,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Sum.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.335,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.670,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.175,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Adding.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.444,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\General.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.301,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.699,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.027,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Benefit.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.709,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.444,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\General.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.027,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Benefit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.871,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.533,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Deleting.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.536,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.175,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Adding.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.498,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Practicum1.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Practicum1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.442,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Practicum1.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Pracicum1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.444,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\General.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.175,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Adding.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.589,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Other.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit5.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.411,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Max.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.561,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\DZ1_2022.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.498,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Practicum1.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Practicum1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.589,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Other.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.175,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Adding.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.396,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Sum.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.442,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Practicum1.dproj=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Pracicum1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.536,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.670,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.840,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.533,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Deleting.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit4.dfm</Transaction>
-    <Transaction>2022.03.15 15:38:27.871,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
-    <Transaction>2022.03.15 15:39:16.589,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Other.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
-    <Transaction>2022.03.15 15:39:16.589,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Other.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit5.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.444,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\General.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022.03.17 09:56:16.013,=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022.03.17 09:56:25.583,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Histogramm.dfm=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022.03.17 09:56:25.583,C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Histogramm.pas=C:\Users\djafa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Adding.pas"/>
@@ -28,5 +40,13 @@
     <File Path="General.dfm"/>
     <File Path="Other.pas"/>
     <File Path="Other.dfm"/>
+    <File Path="Max.pas"/>
+    <File Path="Max.dfm"/>
+    <File Path="Sum.pas"/>
+    <File Path="Sum.dfm"/>
+    <File Path="Benefit.pas"/>
+    <File Path="Benefit.dfm"/>
+    <File Path="Histogramm.pas"/>
+    <File Path="Histogramm.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

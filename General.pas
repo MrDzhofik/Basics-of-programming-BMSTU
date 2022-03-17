@@ -39,7 +39,7 @@ var
 implementation
 
 {$R *.dfm}
-uses Adding, Deleting;
+uses Adding, Deleting, Other;
 
 procedure TMainForm.AddButtonClick(Sender: TObject);
 var size:integer;
@@ -71,11 +71,10 @@ end;
 
 procedure TMainForm.OtherButtonClick(Sender: TObject);
 begin
-    AssignFile(fil,'Market.dat');
+   AssignFile(fil,'Market.dat');
    {$I-} Reset(fil); {$I+}
    if IOResult=0 then
-//   form5.show;
-//   form5.edit1.setfocus;
+     OtherForm.Show()
    else
      writeln('File not found');
 end;

@@ -1,0 +1,55 @@
+unit Max;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TMaxForm = class(TForm)
+    MaxMemo: TMemo;
+    ExitButton: TButton;
+    procedure FormActivate(Sender: TObject);
+    procedure ExitButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MaxForm: TMaxForm;
+
+implementation
+uses General;
+
+var ans, temp: Product;
+{$R *.dfm}
+
+procedure TMaxForm.ExitButtonClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TMaxForm.FormActivate(Sender: TObject);
+var
+  i: Integer;
+begin
+  read(fil, ans);
+  for i := 1 to FileSize(fil) - 1 do
+    begin
+      read(fil, temp);
+      if (ans.quantity < temp.quantity) then
+        ans := temp;
+    end;
+  MaxMemo.Lines.Add('Больше всего на базе:');
+  MaxMemo.Lines.Add(ans.name);
+  MaxMemo.Lines.Add(ans.provider);
+  MaxMemo.Lines.Add('Количество:');
+  MaxMemo.Lines.Add(IntToStr(ans.quantity));
+  MaxMemo.Lines.Add('Цена:');
+  MaxMemo.Lines.Add(IntToStr(ans.price));
+end;
+
+end.

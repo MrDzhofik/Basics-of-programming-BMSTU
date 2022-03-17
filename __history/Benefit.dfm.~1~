@@ -1,0 +1,55 @@
+object BenefitForm: TBenefitForm
+  Left = 0
+  Top = 0
+  Caption = #1057#1080#1084#1091#1083#1103#1090#1086#1088' '#1088#1099#1085#1082#1072
+  ClientHeight = 237
+  ClientWidth = 515
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 120
+  TextHeight = 16
+  object BenefitLabel: TLabel
+    Left = 392
+    Top = 19
+    Width = 91
+    Height = 16
+    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1090#1086#1074#1072#1088':'
+  end
+  object Memo1: TMemo
+    Left = 8
+    Top = 16
+    Width = 353
+    Height = 201
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 0
+  end
+  object BenefitEdit: TEdit
+    Left = 384
+    Top = 51
+    Width = 121
+    Height = 24
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 408
+    Top = 131
+    Width = 75
+    Height = 33
+    Caption = 'Button1'
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 408
+    Top = 179
+    Width = 75
+    Height = 33
+    Caption = 'Button2'
+    TabOrder = 3
+  end
+end

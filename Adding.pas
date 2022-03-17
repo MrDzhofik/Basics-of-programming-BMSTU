@@ -47,12 +47,12 @@ begin
   write(fil, rec);
   NameEdit.setfocus;
   Application.MessageBox('Продукт успешно добавлен', 'Симулятор рынка',mb_Ok);
-
 end;
 
 procedure TAddForm.ExitButtonClick(Sender: TObject);
 begin
-    Close;
+  Close;
+  CloseFile(fil);
 end;
 
 end.

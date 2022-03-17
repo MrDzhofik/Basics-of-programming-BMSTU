@@ -1,0 +1,65 @@
+unit Sum;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TSumForm = class(TForm)
+    SumMemo: TMemo;
+    ExitButton: TButton;
+    SumEdit: TEdit;
+    SumButton: TButton;
+    SumLabel: TLabel;
+    procedure ExitButtonClick(Sender: TObject);
+    procedure SumButtonClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SumForm: TSumForm;
+
+implementation
+uses General;
+{$R *.dfm}
+
+procedure TSumForm.ExitButtonClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TSumForm.FormActivate(Sender: TObject);
+begin
+   SumMemo.Clear;
+   SumMemo.ReadOnly := True;
+end;
+
+procedure TSumForm.SumButtonClick(Sender: TObject);
+var i:integer;
+    mas, sum: real;
+    temp: Product;
+    txt: TextFile;
+begin
+  AssignFile(txt, 'Sum.txt');
+  rewrite(txt);
+  SumMemo.Lines.Add('На заданную сумму можно приобрести:');
+  sum := StrToInt(SumEdit.Text);
+  reset(fil);
+  for i := 0 to FileSize(fil) do
+    begin
+      read(fil, temp);
+      mas := sum / temp.price;
+      write(txt, temp.name, ' ', temp.provider, ' - ', mas);
+      Close(txt);
+      SumMemo.Lines.LoadFromFile('Sum.txt');
+      rewrite(txt);
+    end;
+end;
+
+end.

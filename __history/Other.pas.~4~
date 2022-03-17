@@ -1,0 +1,33 @@
+unit Other;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TOtherForm = class(TForm)
+    MaxButton: TButton;
+    SumButton: TButton;
+    BenefitButton: TButton;
+    HistogrammButton: TButton;
+    ExitButton: TButton;
+    MaxLabel: TLabel;
+    SumLabel: TLabel;
+    BenefitLabel: TLabel;
+    HistogrammLabel: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  OtherForm: TOtherForm;
+
+implementation
+
+{$R *.dfm}
+
+end.

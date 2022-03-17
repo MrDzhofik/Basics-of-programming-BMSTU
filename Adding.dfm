@@ -1,7 +1,7 @@
 object AddForm: TAddForm
   Left = 0
   Top = 0
-  Caption = 'AddForm'
+  Caption = #1057#1080#1084#1091#1083#1103#1090#1086#1088' '#1088#1099#1085#1082#1072
   ClientHeight = 297
   ClientWidth = 386
   Color = clBtnFace

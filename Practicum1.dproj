@@ -111,7 +111,23 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Other.pas">
-            <Form>Form5</Form>
+            <Form>OtherForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Max.pas">
+            <Form>MaxForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Sum.pas">
+            <Form>SumForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Benefit.pas">
+            <Form>BenefitForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Histogramm.pas">
+            <Form>HistogrammForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

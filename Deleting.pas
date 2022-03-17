@@ -70,6 +70,7 @@ end;
 procedure TDeleteForm.ExitButtonClick(Sender: TObject);
 begin
   Close();
+  CloseFile(fil);
 end;
 
 end.
